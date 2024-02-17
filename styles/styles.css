@@ -1,0 +1,44 @@
+/* font raleway */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* <uniquifier>: Use a uniquifier for the class name
+    <weight>: Use a value from 100 to 900 */
+
+.raleway-normal {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* font inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* <uniquifier>: Use a uniquifier for the class name
+    <weight>: Use a value from 100 to 900 */
+
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.header-title {
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  border-radius: 1rem;
+  background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(../images/banner.png);
+  background-repeat: no-repeat;
+}
+
+.btn-primary{
+  background: #1DD100;
+  border-radius: 20px;
+  padding: 1rem;
+  font-size: large;
+  font-weight: bold;
+}
