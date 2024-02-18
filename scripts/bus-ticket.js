@@ -14,12 +14,13 @@ function handleClick(event) {
 
 const allBtn = document.getElementsByClassName("btn-primary");
 let count = 0;
+
 for (const btn of allBtn) {
     btn.addEventListener("click", function (event) {
         const btnId = event.target.id;
         count = count + 1;
-        // console.log(btnId);
 
+        // added li to ul
         const selectedSeatContainer = document.getElementById("selected-seat-container");
         const li = document.createElement("li");
         const p = document.createElement("p");
@@ -29,11 +30,6 @@ for (const btn of allBtn) {
         const p3 = document.createElement("p");
         p3.innerText = 550;
 
-        // total price 
-        totalPrice("total-price");
-        // grand price
-        totalPrice("grand-price");
-
         // show selected seat
         li.appendChild(p);
         li.appendChild(p2);
@@ -41,6 +37,11 @@ for (const btn of allBtn) {
         selectedSeatContainer.appendChild(li);
         setInnerText("seat-count", count);
         setBackgroundColorById(btnId);
+
+        // total price 
+        totalPrice("total-price");
+        // grand price
+        totalPrice("grand-price");
     })
 }
 // total price
@@ -50,6 +51,7 @@ function totalPrice(elementId) {
     const sum = convertedTotalPrice + 550;
     setInnerText(elementId, sum);
 }
+
 // Grand price
 function grandPrice(elementId) {
     const totalPrice = document.getElementById("total-price").innerText;
@@ -68,9 +70,34 @@ function grandPrice(elementId) {
     else {
         setInnerText("grand-price", convertedTotalPrice);
     }
-
-
-
-
 }
 
+// limit button selection
+let selectedCount = 0;
+
+function toggleSelection(button) {
+    if (button.classList.contains('selected')) {
+        button.classList.remove('selected');
+        selectedCount--;
+    } else {
+        if (selectedCount < 4) {
+            button.classList.add('selected');
+            selectedCount++;
+        } else {
+            alert('You can only select up to 4 buttons.');
+        }
+    }
+
+    updateButtonState();
+}
+
+function updateButtonState() {
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button) => {
+        if (selectedCount >= 4 && !button.classList.contains('selected')) {
+            button.disabled = true;
+        } else {
+            button.disabled = false;
+        }
+    });
+}
