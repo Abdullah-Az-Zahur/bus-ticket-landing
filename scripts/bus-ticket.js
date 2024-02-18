@@ -50,4 +50,27 @@ function totalPrice(elementId) {
     const sum = convertedTotalPrice + 550;
     setInnerText(elementId, sum);
 }
+// Grand price
+function grandPrice(elementId) {
+    const totalPrice = document.getElementById("total-price").innerText;
+    const convertedTotalPrice = parseInt(totalPrice);
+
+    const inputCoupon = document.getElementById("input-coupon");
+    const couponText = inputCoupon.value;
+    if (couponText === "NEW15") {
+        const couponAppliedPrice = totalPrice * 0.15;
+        setInnerText("grand-price", convertedTotalPrice - couponAppliedPrice);
+    }
+    else if (couponText === "Couple 20") {
+        const couponAppliedPrice = totalPrice * 0.20;
+        setInnerText("grand-price", convertedTotalPrice - couponAppliedPrice);
+    }
+    else {
+        setInnerText("grand-price", convertedTotalPrice);
+    }
+
+
+
+
+}
 
