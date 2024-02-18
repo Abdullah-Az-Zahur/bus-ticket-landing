@@ -2,6 +2,10 @@ function ticketBuySuccess() {
     hideElementById('main-page');
     showElementById('buying-result')
 }
+function homePage(){
+    hideElementById('buying-result');
+    showElementById('main-page');
+}
 
 function handleClick(event) {
     console.log('event');
