@@ -20,6 +20,14 @@ for (const btn of allBtn) {
         const btnId = event.target.id;
         count = count + 1;
 
+        if (count > 4) {
+            alert("Maximum 4 seat can be book ")
+            return;
+        }
+
+        // event.target.setAttribute("disabled", false);
+        // event.target.setAttribute("editable", true);
+
         // added li to ul
         const selectedSeatContainer = document.getElementById("selected-seat-container");
         const li = document.createElement("li");
@@ -73,31 +81,33 @@ function grandPrice(elementId) {
 }
 
 // limit button selection
-let selectedCount = 0;
+// let selectedCount = 0;
 
-function toggleSelection(button) {
-    if (button.classList.contains('selected')) {
-        button.classList.remove('selected');
-        selectedCount--;
-    } else {
-        if (selectedCount < 4) {
-            button.classList.add('selected');
-            selectedCount++;
-        } else {
-            alert('You can only select up to 4 buttons.');
-        }
-    }
+// function toggleSelection(button) {
+//     if (button.classList.contains('selected')) {
+//         button.classList.remove('selected');
+//         selectedCount--;
+//     } else {
+//         if (selectedCount < 4) {
+//             button.classList.add('selected');
+//             selectedCount++;
+//         } else {
+//             alert('You can only select up to 4 buttons.');
+//         }
+//     }
 
-    updateButtonState();
-}
+//     updateButtonState();
+// }
 
-function updateButtonState() {
-    const buttons = document.querySelectorAll('button');
-    buttons.forEach((button) => {
-        if (selectedCount >= 4 && !button.classList.contains('selected')) {
-            button.disabled = true;
-        } else {
-            button.disabled = false;
-        }
-    });
-}
+// function updateButtonState() {
+//     const buttons = document.querySelectorAll('button');
+//     buttons.forEach((button) => {
+//         if (selectedCount >= 4 && !button.classList.contains('selected')) {
+//             button.disabled = true;
+//         } else {
+//             button.disabled = false;
+//         }
+//     });
+// }
+
+// prevent clicking same btn

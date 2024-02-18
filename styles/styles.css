@@ -35,16 +35,16 @@
   background-repeat: no-repeat;
 }
 
-.btn-primary2{
+.btn-primary2 {
   background: #1DD100;
   border-radius: 20px;
   padding: 1rem;
   font-size: large;
   font-weight: bold;
-  color:white
+  color: white
 }
 
-.btn-seat{
+.btn-seat {
   background: #03071280;
   border-radius: 20px;
   padding: 2rem;
@@ -53,7 +53,7 @@
 
 }
 
-li{
+li {
   display: flex;
   /* gap: 20px;
   width: 200px; */
