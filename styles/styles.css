@@ -35,7 +35,7 @@
   background-repeat: no-repeat;
 }
 
-.btn-primary{
+.btn-primary2{
   background: #1DD100;
   border-radius: 20px;
   padding: 1rem;
@@ -44,11 +44,21 @@
   color:white
 }
 
-.btn-set{
+.btn-seat{
   background: #03071280;
   border-radius: 20px;
   padding: 2rem;
   font-size: large;
   font-weight: bold;
 
+}
+
+li{
+  display: flex;
+  /* gap: 20px;
+  width: 200px; */
+  margin: auto;
+  text-align: center;
+  list-style: numeric;
+  justify-content: space-between;
 }
