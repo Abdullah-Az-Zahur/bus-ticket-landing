@@ -8,6 +8,10 @@ function handleClick(event) {
 
 }
 
+// apply coupon
+
+
+
 const allBtn = document.getElementsByClassName("btn-primary");
 let count = 0;
 for (const btn of allBtn) {
@@ -26,11 +30,11 @@ for (const btn of allBtn) {
         p3.innerText = 550;
 
         // total price 
-        const totalPrice = document.getElementById("total-price").innerText;
-        const convertedTotalPrice = parseInt(totalPrice);
-        document.getElementById("total-price").innerText = convertedTotalPrice + 550;
+        totalPrice("total-price");
+        // grand price
+        totalPrice("grand-price");
 
-
+        // show selected seat
         li.appendChild(p);
         li.appendChild(p2);
         li.appendChild(p3);
@@ -39,3 +43,11 @@ for (const btn of allBtn) {
         setBackgroundColorById(btnId);
     })
 }
+// total price
+function totalPrice(elementId) {
+    const totalPrice = document.getElementById(elementId).innerText;
+    const convertedTotalPrice = parseInt(totalPrice);
+    const sum = convertedTotalPrice + 550;
+    setInnerText(elementId, sum);
+}
+
