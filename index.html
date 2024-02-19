@@ -34,32 +34,20 @@
                             </div>
                             <ul tabindex="0"
                                 class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><a>Item 1</a></li>
-                                <li>
-                                    <a>Parent</a>
-                                    <ul class="p-2">
-                                        <li><a>Submenu 1</a></li>
-                                        <li><a>Submenu 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a>Item 3</a></li>
+                                <li><a>Home</a></li>
+                                <li><a>About</a></li>
+                                <li><a>Destination</a></li>
+                                <li><a>Search</a></li>
                             </ul>
                         </div>
                         <h3 class="text-3xl font-extrabold">G-Ticket</h3>
                     </div>
                     <div class="navbar-center hidden lg:flex">
                         <ul class="menu menu-horizontal px-1">
-                            <li><a>Item 1</a></li>
-                            <li>
-                                <details>
-                                    <summary>Parent</summary>
-                                    <ul class="p-2">
-                                        <li><a>Submenu 1</a></li>
-                                        <li><a>Submenu 2</a></li>
-                                    </ul>
-                                </details>
-                            </li>
-                            <li><a>Item 3</a></li>
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
                         </ul>
                     </div>
                     <div class="navbar-end">
@@ -73,16 +61,54 @@
             </nav>
 
             <!-- banner -->
-            <div class="relative header-title text-center">
-                <h2 class="font-extrabold text-5xl text-center flex flex-col pt-20">End-to-End Travel with <span
-                        class="text-[#1DD100] py-5">G Paribahan</span></h2>
-                <p class="w-2/6 mx-auto mb-5">Life is similar to a bus ride. The journey begins when we board the bus.
-                    We
-                    meet people along our way
-                    of which some are strangers, some friends and some strangers yet to be friends. There are stops at
-                    intervals and people board in.</p>
+            <div class="">
+                <div class="relative header-title text-center">
+                    <h2 class="font-extrabold text-5xl text-center flex flex-col pt-20">End-to-End Travel with <span
+                            class="text-[#1DD100] py-5">G Paribahan</span></h2>
+                    <p class="w-2/6 mx-auto mb-5">Life is similar to a bus ride. The journey begins when we board the
+                        bus.
+                        We
+                        meet people along our way
+                        of which some are strangers, some friends and some strangers yet to be friends. There are stops
+                        at
+                        intervals and people board in.</p>
 
-                <a href="#bus-section" class="btn-primary2 my-5 ">Buy Ticket </a>
+                    <a href="#bus-section" class="btn-primary2 my-5 text-black ">Buy Ticket </a>
+                    <!-- Badge -->
+                    <div class="flex flex-col lg:flex-row justify-between mx-16 gap-5 lg:relative lg:top-32">
+                        <!-- card 1 -->
+                        <div
+                            class=" flex-row  card card-compact w-80 h-32 bg-base-100 shadow-xl shadow-green-500 items-center justify-center bg-white ">
+                            <figure class=""><img src="images/people.png" alt="Shoes" /></figure>
+                            <div class="card-body  max-w-fit">
+                                <h2 class="card-title text-2xl text-black font-extrabold inter-normal">500K+</h2>
+                                <p>Registered users</p>
+
+                            </div>
+                        </div>
+                        <!-- card 2 -->
+                        <div
+                            class=" flex-row  card card-compact w-80 h-32 bg-base-100 shadow-xl shadow-green-500 items-center justify-center bg-white ">
+                            <figure class=""><img src="images/ticket-cupon.png" alt="Shoes" /></figure>
+                            <div class="card-body  max-w-fit">
+                                <h2 class="card-title text-2xl text-black font-extrabold inter-normal">1.7 lacks</h2>
+                                <p>Tickets sold</p>
+
+                            </div>
+                        </div>
+                        <!-- card 3 -->
+                        <div
+                            class=" flex-row  card card-compact w-80 h-32 bg-base-100 shadow-xl shadow-green-500 items-center justify-center bg-white ">
+                            <figure class=""><img src="images/stoppage.png" alt="Shoes" /></figure>
+                            <div class="card-body  max-w-fit">
+                                <h2 class="card-title text-2xl text-black font-extrabold inter-normal">80K+</h2>
+                                <p>Rental partners</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </header>
 
@@ -90,7 +116,7 @@
         <main class="lg:container lg:mx-auto">
 
             <!-- Coupon section -->
-            <section class="my-7 lg:my-20 text-center">
+            <section class="mt-7 lg:mt-32 text-center">
                 <h3 class="text-2xl font-bold text-center my-7">Best offers for you</h3>
                 <div class="flex-1 lg:flex justify-center gap-4 ">
                     <div class="flex p-8 mx-auto bg-[#FFBF0F] rounded-lg shadow-lg items-center gap-10 w-3/4">
@@ -126,7 +152,7 @@
 
             <!-- bus section -->
             <section id="bus-section"
-                class="my-7 lg:my-20 text-center bg-[#F7F8F8] border-green-600 rounded-3xl border-2 ">
+                class="mt-7 lg:mt-20 text-center bg-[#F7F8F8] border-t-green-600 rounded-t-3xl border-4 ">
                 <h3 class="text-2xl font-bold text-center my-7 text-black">G Paribahan</h3>
                 <p class="w-2/6 mx-auto mb-5">Life is similar to a bus ride. The journey begins when we board the bus.
                     We
@@ -177,7 +203,7 @@
                 </div>
 
                 <!-- ticketing interface -->
-                <div class="flex justify-between bg-white  w-5/6  mx-auto rounded-xl my-5 p-5">
+                <div class="flex flex-col lg:flex-row justify-between bg-white  w-5/6  mx-auto rounded-xl my-5 p-5">
 
                     <div><!-- select seat -->
                         <div>
@@ -316,12 +342,12 @@
                         <div class="my-5  p-5">
                             <p class="my-5">Passenger Name*</p>
                             <label class="input input-bordered flex items-center gap-2 bg-white my-5">
-                                
+
                                 <input type="text" class="grow required:" placeholder="Enter your name" />
                             </label>
                             <p class="my-5">Phone Number*</p>
                             <label class="input input-bordered flex items-center gap-2 bg-white my-5">
-                               
+
                                 <input type="number" class="grow required:" placeholder="Enter your phone number" />
                             </label>
                             <p class="my-5">Email ID</p>
@@ -345,8 +371,34 @@
         </main>
 
         <!-- footer -->
-        <footer>
-
+        <footer class="bg-[#030712]">
+            <footer class="footer p-10 bg-[#030712] text-neutral-content justify-between">
+                <aside>
+                    <h3 class="text-3xl font-extrabold">G-Ticket</h3>
+                    <p>P-Ticket is a digital platform to make your <br> daily commuting better.</p>
+                </aside>
+                <nav class="">
+                    <h6 class="footer-title">Download our app</h6>
+                    <div class="grid grid-flow-col gap-4 border rounded-md p-2 bg-black">
+                        <img src="images/playstore.png" alt="">
+                        <div class="flex-col">
+                            <p class="font-thin text-white">Get it on</p>
+                        <h5 class=" text-lg text-white">Google Play</h5>
+                        </div>
+                    </div>
+                </nav>
+            </footer>
+            <hr class="mb-6">
+            <div class="flex flex-col lg:flex-row justify-between bg-[#030712] mx-9">
+                <div>
+                    <p>@all rights reserved, P-Ticket services limited.2024</p>
+                </div>
+                <div class="flex flex-col lg:flex-row">
+                    <p>Terms & condition</p>
+                    <p>Return & refund policy</p>
+                    <p>Privacy policy</p>
+                </div>
+            </div>
         </footer>
     </section>
 

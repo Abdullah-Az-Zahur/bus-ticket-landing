@@ -28,10 +28,12 @@
 
 .header-title {
   background-size: cover;
-  background-position: center;
-  height: 80vh;
+  background-position: center center;
+  height: 550px;
+  width: screen;
   border-radius: 1rem;
-  background-image: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%), url(../images/banner.png);
+  background-image: linear-gradient(180deg, rgba(03, 07, 18 , 0.128) 0%, rgba(03, 07, 18 , 0.128) 50%), url(../images/banner.png);
+  /* background-color: #ffffff; */
   background-repeat: no-repeat;
 }
 
