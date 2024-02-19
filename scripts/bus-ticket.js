@@ -73,17 +73,20 @@ function grandPrice(elementId) {
 
     const inputCoupon = document.getElementById("input-coupon");
     const couponText = inputCoupon.value;
-    if (couponText === "NEW15") {
-        const couponAppliedPrice = totalPrice * 0.15;
-        setInnerText("grand-price", convertedTotalPrice - couponAppliedPrice);
+    if(convertedTotalPrice === 2200){
+        if (couponText === "NEW15") {
+            const couponAppliedPrice = totalPrice * 0.15;
+            setInnerText("grand-price", convertedTotalPrice - couponAppliedPrice);
+        }
+        else if (couponText === "Couple 20") {
+            const couponAppliedPrice = totalPrice * 0.20;
+            setInnerText("grand-price", convertedTotalPrice - couponAppliedPrice);
+        }
+        else {
+            setInnerText("grand-price", convertedTotalPrice);
+        }
     }
-    else if (couponText === "Couple 20") {
-        const couponAppliedPrice = totalPrice * 0.20;
-        setInnerText("grand-price", convertedTotalPrice - couponAppliedPrice);
-    }
-    else {
-        setInnerText("grand-price", convertedTotalPrice);
-    }
+    
 }
 
 function totalSeat(elementId){
