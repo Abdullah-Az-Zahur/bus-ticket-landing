@@ -2,7 +2,7 @@ function ticketBuySuccess() {
     hideElementById('main-page');
     showElementById('buying-result')
 }
-function homePage(){
+function homePage() {
     hideElementById('buying-result');
     showElementById('main-page');
 }
@@ -73,7 +73,7 @@ function grandPrice(elementId) {
 
     const inputCoupon = document.getElementById("input-coupon");
     const couponText = inputCoupon.value;
-    if(convertedTotalPrice === 2200){
+    if (convertedTotalPrice === 2200) {
         if (couponText === "NEW15") {
             const couponAppliedPrice = totalPrice * 0.15;
             setInnerText("grand-price", convertedTotalPrice - couponAppliedPrice);
@@ -86,14 +86,14 @@ function grandPrice(elementId) {
             setInnerText("grand-price", convertedTotalPrice);
         }
     }
-    
+
 }
 
-function totalSeat(elementId){
+function totalSeat(elementId) {
     const totalSeat = document.getElementById("total-seat").innerText;
     console.log(totalSeat)
     const convertedTotalSeat = parseInt(totalSeat);
-    const leftSeat = convertedTotalSeat - 1 ;
+    const leftSeat = convertedTotalSeat - 1;
     console.log(leftSeat);
     setInnerText("total-seat", leftSeat);
 }
