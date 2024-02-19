@@ -53,7 +53,9 @@ for (const btn of allBtn) {
         // total price 
         totalPrice("total-price");
         // grand price
-        totalPrice("grand-price");
+        grandPrice("grand-price");
+        // left seat
+        totalSeat("total-seat");
     })
 }
 // total price
@@ -82,6 +84,15 @@ function grandPrice(elementId) {
     else {
         setInnerText("grand-price", convertedTotalPrice);
     }
+}
+
+function totalSeat(elementId){
+    const totalSeat = document.getElementById("total-seat").innerText;
+    console.log(totalSeat)
+    const convertedTotalSeat = parseInt(totalSeat);
+    const leftSeat = convertedTotalSeat - 1 ;
+    console.log(leftSeat);
+    setInnerText("total-seat", leftSeat);
 }
 
 // limit button selection
